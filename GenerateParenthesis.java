@@ -3,7 +3,7 @@ import java.util.List;
 
 public class GenerateParenthesis {
     public List<String> generateParenthesis(int n){
-       List<String> list = new ArrayList<>();
+       List<String> list = new ArrayList<String>();
        backtrack("", list, n, 0, 0);
        return list;
     }
@@ -15,7 +15,7 @@ public class GenerateParenthesis {
         if(open<n){
             backtrack(temp+"(", list, n, open+1, close);
         }
-        if(close<n){
+        if(close<open){
             backtrack(temp+")", list, n, open, close+1);
         }
     }
