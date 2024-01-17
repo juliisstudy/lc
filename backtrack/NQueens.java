@@ -11,12 +11,12 @@ public class NQueens {
     public List<List<String>> solveNQueens(int n){
         size = n;
         char emptyBoard[][]=new char[size][size];
-        for(int i = 0;i<size;i++){
-            for(int j = 0;i<size;i++){
+        for(int i = 0;i<n;i++){
+            for(int j = 0;j<n;j++){
                 emptyBoard[i][j]='.';
             }
         }
-        backtrack(n, new HashSet<>(),new HashSet<>(),new HashSet<>(),emptyBoard);
+        backtrack(0, new HashSet<>(),new HashSet<>(),new HashSet<>(),emptyBoard);
         return result;
     }
 
@@ -28,6 +28,7 @@ public class NQueens {
         }
         return board;
     }
+    
     private void backtrack(int row, Set<Integer> diagonals,Set<Integer> antiDiagonals,Set<Integer> cols,char[][] state){
         if(row==size){
             result.add(createBoard(state));
