@@ -1,3 +1,4 @@
+package sort;
 public class removeDuplicate {
     public int remove(int[] nums){
         int p =0;
