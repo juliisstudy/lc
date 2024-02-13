@@ -13,7 +13,7 @@ public class IsPalindrome {
             }else if(!Character.isLetterOrDigit(str.charAt(j))){
                 j--;
             }else{
-                if(Character.toLowerCase(str.charAt(i))!=Character.toLowerCase(str.charAt))){
+                if(Character.toLowerCase(str.charAt(i))!=Character.toLowerCase(str.charAt(j))){
                     return false;
                 }
             }
